@@ -1,4 +1,4 @@
-[@bs.module] external reactClass: ReasonReact.reactClass = "antd/lib/form";
+[@bs.module] external reactClass: ReasonReact.reactClass = "antd/lib/form/Form";
 
 [%bs.raw {|require("antd/lib/form/style")|}];
 
@@ -37,6 +37,13 @@ module Item = {
     _ =
     "";
 
+
+[@bs.deriving abstract]
+type renderProps = {
+  [@bs.optional] getFieldError: unit => string
+};
+
+
   let make =
       (
         ~prefixCls=?,
@@ -52,7 +59,7 @@ module Item = {
         ~required=?,
         ~style=?,
         ~colon=?,
-        children,
+        children: renderProps => reactElement,
       ) =>
     ReasonReact.wrapJsForReason(
       ~reactClass,
@@ -93,11 +100,6 @@ external makeProps:
   "";
 
 
-[@bs.deriving abstract]
-type renderProps = {
-  [@bs.optional] getFieldError: unit => string
-};
-
 let make =
     (
       ~layout=?,
@@ -106,7 +108,7 @@ let make =
       ~className=?,
       ~prefixCls=?,
       ~hideRequiredMark=?,
-      children: renderProps => ReasonReact.reactElement,
+      children
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
