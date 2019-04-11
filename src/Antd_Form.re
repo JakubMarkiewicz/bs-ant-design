@@ -59,7 +59,7 @@ type renderProps = {
         ~required=?,
         ~style=?,
         ~colon=?,
-        children: renderProps => reactElement,
+        children: renderProps => ReasonReact.reactElement,
       ) =>
     ReasonReact.wrapJsForReason(
       ~reactClass,
