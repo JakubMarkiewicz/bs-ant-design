@@ -13,19 +13,20 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "antd": "^3.11.6",
     "bs-platform": "^4.0.14",
     "cheerio": "^1.0.0-rc.2",
     "got": "^9.5.0",
     "lodash": "^4.17.11",
-    "reason-react": ">=0.5.3",
-    "antd": "^3.11.6"
+    "reason-react": ">=0.5.3"
   },
   "peerDependencies": {
+    "antd": ">=3.10.0",
     "bs-platform": "^4.0.5",
-    "reason-react": ">=0.5.3",
-    "antd": ">=3.10.0"
+    "reason-react": ">=0.5.3"
   },
   "dependencies": {
+    "@ryb73/decco": "^0.0.7",
     "bs-moment": "^0.4.1",
     "re-classnames": "^3.0.0"
   }

@@ -15,6 +15,11 @@
   resolved "https://npm.togedo.com/@ant-design%2ficons/-/icons-1.1.16.tgz#ac6426216934e3f4bc108f2f48f92ed66789235e"
   integrity sha512-0zNVP5JYBJkfMi9HotN6QBQjF3SFmUlumJNJXZIH+pZWp/5EbrCczzlG3YTmBWoyRHAsuOGIjSFIy8v/76DTPg==
 
+"@ryb73/decco@^0.0.7":
+  version "0.0.7"
+  resolved "https://npm.togedo.com/@ryb73%2fdecco/-/decco-0.0.7.tgz#4566e0bbdb9d9b3403609dc5e437dc8e82327bea"
+  integrity sha512-452D4KvLAtUQGoV3/LROIrGxMskL9OQtzUzHkBrpzI6qo1kckaPc7z8BZlibxv2Dzw2XK3N9HReiyTHxgz9JDA==
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://npm.togedo.com/@sindresorhus%2fis/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
