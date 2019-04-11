@@ -106,7 +106,7 @@ let make =
       ~className=?,
       ~prefixCls=?,
       ~hideRequiredMark=?,
-      children,
+      children: renderProps => ReasonReact.reactElement,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -120,6 +120,5 @@ let make =
         ~hideRequiredMark?,
         (),
       ),
-    renderProps =>
-    children(renderProps)
+    children
   );
