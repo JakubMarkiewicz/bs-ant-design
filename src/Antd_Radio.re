@@ -81,3 +81,73 @@ module Group = {
       children,
     );
 };
+
+module Button = {
+  [@bs.module "antd/lib/radio"]
+  external reactClass: ReasonReact.reactClass = "Button";
+  [@bs.obj]
+  external makeProps:
+    (
+      ~prefixCls: string=?,
+      ~className: string=?,
+      ~defaultChecked: bool=?,
+      ~checked: bool=?,
+      ~style: ReactDOMRe.Style.t=?,
+      ~disabled: bool=?,
+      ~onChange: ReactEvent.Form.t => unit=?,
+      ~onClick: ReactEvent.Mouse.t => unit=?,
+      ~onMouseEnter: ReactEvent.Mouse.t => unit=?,
+      ~onMouseLeave: ReactEvent.Mouse.t => unit=?,
+      ~onKeyPress: ReactEvent.Keyboard.t => unit=?,
+      ~onKeyDown: ReactEvent.Keyboard.t => unit=?,
+      ~value: string=?,
+      ~tabIndex: int=?,
+      ~name: string=?,
+      unit
+    ) =>
+    _ =
+    "";
+
+  let make =
+      (
+        ~prefixCls=?,
+        ~className=?,
+        ~defaultChecked=?,
+        ~checked=?,
+        ~style=?,
+        ~disabled=?,
+        ~onChange=?,
+        ~onClick=?,
+        ~onMouseEnter=?,
+        ~onMouseLeave=?,
+        ~onKeyPress=?,
+        ~onKeyDown=?,
+        ~value=?,
+        ~tabIndex=?,
+        ~name=?,
+        children,
+      ) =>
+    ReasonReact.wrapJsForReason(
+      ~reactClass,
+      ~props=
+        makeProps(
+          ~prefixCls?,
+          ~className?,
+          ~defaultChecked?,
+          ~checked?,
+          ~style?,
+          ~disabled?,
+          ~onChange?,
+          ~onClick?,
+          ~onMouseEnter?,
+          ~onMouseLeave?,
+          ~onKeyPress?,
+          ~onKeyDown?,
+          ~value?,
+          ~tabIndex?,
+          ~name?,
+          (),
+        ),
+      children,
+    );
+};
