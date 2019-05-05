@@ -8,7 +8,7 @@ external make:
     ~id: string=?,
     ~className: string=?,
     ~style: ReactDOMRe.Style.t=?,
-    ~childre: React.element=?
+    ~children: React.element=?
   ) =>
   React.element =
   "antd/lib/layout";
@@ -27,7 +27,7 @@ module Header = {
       ~id: string=?,
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?,
-      ~childre: React.element=?
+      ~children: React.element=?
     ) =>
     React.element =
     "Header";
