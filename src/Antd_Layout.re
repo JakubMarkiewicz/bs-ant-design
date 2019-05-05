@@ -41,7 +41,7 @@ module Footer = {
       ~id: string=?,
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?,
-      ~childre: React.element=?
+      ~children: React.element=?
     ) =>
     React.element =
     "Footer";
@@ -55,7 +55,7 @@ module Content = {
       ~id: string=?,
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?,
-      ~childre: React.element=?
+      ~children: React.element=?
     ) =>
     React.element =
     "Content";
