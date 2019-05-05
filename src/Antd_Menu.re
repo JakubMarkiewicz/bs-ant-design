@@ -115,6 +115,7 @@ module Item = {
       ~disabled: bool=?,
       ~id: string=?,
       ~className: string=?,
+      ~onItemHover: ReactEvent.Mouse.t => unit=?,
       ~style: ReactDOMRe.Style.t=?,
       ~children: React.element=?,
       unit
@@ -128,13 +129,22 @@ module Item = {
         ~disabled: option(bool)=?,
         ~id: option(string)=?,
         ~className: option(string)=?,
+        ~onItemHover: option(ReactEvent.Mouse.t => unit)=?,
         ~style: option(ReactDOMRe.Style.t)=?,
         ~children: option(React.element)=?,
         (),
       ) =>
     React.createElement(
       reactComponent,
-      makePropsItem(~disabled?, ~id?, ~className?, ~style?, ~children?, ()),
+      makePropsItem(
+        ~disabled?,
+        ~id?,
+        ~className?,
+        ~onItemHover?,
+        ~style?,
+        ~children?,
+        (),
+      ),
     );
 };
 

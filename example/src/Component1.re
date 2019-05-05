@@ -28,4 +28,5 @@ let make = () =>
     <Radio />
     <Rate />
     <Table />
+    <Tooltip />
   </React.Fragment>;
