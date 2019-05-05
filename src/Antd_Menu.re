@@ -156,6 +156,7 @@ module SubMenu = {
   external makePropsItem:
     (
       ~disabled: bool=?,
+      ~title: React.element=?,
       ~id: string=?,
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?,
@@ -169,6 +170,7 @@ module SubMenu = {
   let make =
       (
         ~disabled: option(bool)=?,
+        ~title: option(React.element)=?,
         ~id: option(string)=?,
         ~className: option(string)=?,
         ~style: option(ReactDOMRe.Style.t)=?,
@@ -177,6 +179,14 @@ module SubMenu = {
       ) =>
     React.createElement(
       reactComponent,
-      makePropsItem(~disabled?, ~id?, ~className?, ~style?, ~children?, ()),
+      makePropsItem(
+        ~disabled?,
+        ~title?,
+        ~id?,
+        ~className?,
+        ~style?,
+        ~children?,
+        (),
+      ),
     );
 };
