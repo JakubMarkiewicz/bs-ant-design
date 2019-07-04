@@ -1,3 +1,7 @@
+# DEPRECATED
+The most up to date version is [HERE](https://github.com/Enalmada/bs-ant-design)
+
+
 # bs-ant-design-alt
 
 ## Introduction
